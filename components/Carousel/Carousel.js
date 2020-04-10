@@ -17,3 +17,27 @@
     <div class="right-button"> > </div>
   </div>
 */
+const image1 = './assets/carousel/mountains.jpeg'
+
+function wheel(){
+  const carousel = document.createElement('div')
+  const leftButton = document.createElement('div')
+  const img1 = document.createElement('img')
+  const img2 = document.createElement('img')
+  const img3 = document.createElement('img')
+  const img4 = document.createElement('img')
+  const rightButton = document.createElement('div')
+
+  carousel.appendChild(leftButton)
+  carousel.appendChild(img1)
+  carousel.appendChild(img2)
+  carousel.appendChild(img3)
+  carousel.appendChild(img4)
+  carousel.appendChild(rightButton)
+
+  carousel.classList.add('carousel')
+  leftButton.classList.add('left-button')
+  rightButton.classList.add('right-button')
+
+  
+}
