@@ -50,3 +50,18 @@ function cardMaker(user){
 }
     const cardsContainer = document.querySelector('.cards-container') 
 
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(response => {
+    const topics = Object.entries(response.data.articles)
+    topics.forEach(subject => {
+        subject[1].forEach(data => {
+            const articleCard = cardMaker(data);
+            cardsContainer.appendChild(articleCard);
+            console.log(subject[1])
+        })
+        
+    });
+})
+.catch(err => {
+    console.log(err)
+})
